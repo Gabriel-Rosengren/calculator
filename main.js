@@ -1,8 +1,7 @@
-let number = "0";
+let number = "";
 let storedNumber = "";
 let operator = "";
 let screenTextNode;
-let firstNumber = true;
 
 window.onload = () => {
     screenTextNode = document.getElementById("screen-text");
@@ -11,7 +10,7 @@ window.onload = () => {
 
 function addNumber(num)
 {
-    if(firstNumber == true)
+    if(!number)
     {
         if(num != 0)
         {
@@ -44,7 +43,7 @@ function operatorPressed(op)
     }
     
     operator = op;
-    number = "0";
+    number = "";
     updateScreen();
 }
 
@@ -73,11 +72,10 @@ function doOp(num1, op, num2)
 
 function reset()
 {
-    number = "0";
+    number = "";
     storedNumber = "";
     operator = "";
     updateScreen();
-    firstNumber = true;
 }
 
 function updateScreen()
