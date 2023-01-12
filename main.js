@@ -5,7 +5,7 @@ let screenTextNode;
 
 window.onload = () => {
     screenTextNode = document.getElementById("screen-text");
-    updateScreen();
+    updateScreen(number);
 }
 
 function addNumber(num)
@@ -22,14 +22,14 @@ function addNumber(num)
     {
         number = number + num;
     }
-    updateScreen();
+    updateScreen(number);
     
 }
 
 function removeNumber()
 {
     number = number.substring(0, number.length - 1);
-    updateScreen();
+    updateScreen(number);
 }
 
 function operatorPressed(op)
@@ -38,13 +38,14 @@ function operatorPressed(op)
     if(storedNumber) {
         storedNumber = doOp(storedNumber, operator, number);
         operator = op;
-        updateScreen();
+        number = "";
+        updateScreen(storedNumber);
 
     } else {
         operator = op;
         storedNumber = number;
         number = "";
-        updateScreen();
+        updateScreen(storedNumber);
     }
     
     
@@ -67,7 +68,7 @@ function doOp(num1, op, num2)
         case "%":
             return num1 % num2;
         default:
-            screenTextNode = "INVALID OPERATOR"
+            screenTextNode.innerText = "INVALID OPERATOR"
     }
     
     return 0;
@@ -78,19 +79,19 @@ function reset()
     number = "";
     storedNumber = "";
     operator = "";
-    updateScreen();
+    updateScreen(number);
 }
 
-function updateScreen()
+function updateScreen(text)
 {
-    if(number)
+    if(!text)
     {
-        screenTextNode.innerText = number;
+        screenTextNode.innerText = "0"; 
     }
     else
     {
-        screenTextNode.innerText = "0";
-    }
+        screenTextNode.innerText = text;
+    } 
 }
 
 function doEquation()
@@ -104,7 +105,7 @@ function doEquation()
     {
         number = doOp(storedNumber, operator, number)
         storedNumber = ""
-        updateScreen();
+        updateScreen(number);
     }
 
 }
