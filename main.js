@@ -105,3 +105,19 @@ function doEquation()
     }
 
 }
+
+function negate()
+{
+    if(number)
+    {
+        if(number[0] == "-")
+        {
+            number = number.substring(1)
+        }
+        else
+        {
+            number = "-" + number;
+        }
+        updateScreen();
+    }
+}
