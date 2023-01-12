@@ -1,3 +1,7 @@
+body {
+    background-color: #222222;
+}
+
 td {
     /*border: 1px solid black;*/
 }
@@ -11,6 +15,7 @@ td {
     border: 1px solid black;
     width: 8em;
     padding-right: 0.5em;
+    background-color: white;
 }
 
 #screen-text {
