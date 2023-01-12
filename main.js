@@ -89,3 +89,19 @@ function updateScreen()
         screenTextNode.innerText = "0";
     }
 }
+
+function doEquation()
+{
+    if(!storedNumber)
+    {
+        storedNumber = number;
+        number = "";
+    }
+    else
+    {
+        number = doOp(storedNumber, operator, number)
+        storedNumber = ""
+        updateScreen();
+    }
+
+}
