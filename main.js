@@ -32,19 +32,22 @@ function removeNumber()
     updateScreen();
 }
 
-
 function operatorPressed(op)
 {
-    operator = op;
+    
     if(storedNumber) {
         storedNumber = doOp(storedNumber, operator, number);
+        operator = op;
+        updateScreen();
+
     } else {
+        operator = op;
         storedNumber = number;
+        number = "";
+        updateScreen();
     }
     
-    operator = op;
-    number = "";
-    updateScreen();
+    
 }
 
 function doOp(num1, op, num2)
