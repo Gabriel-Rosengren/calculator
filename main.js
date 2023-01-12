@@ -122,6 +122,6 @@ function negate()
         {
             number = "-" + number;
         }
-        updateScreen();
+        updateScreen(number);
     }
 }
