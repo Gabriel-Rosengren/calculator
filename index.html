@@ -4,83 +4,44 @@
         <script src="main.js"></script>
     </head>
     <body>
+        <div id="spacer1"></div>
         <div class="calculator">
             <div class="screen">
                 <span id="screen-text">
                 </span>
             </div>
-            <table>
-                <tr>
-                    <td>
-                        <button class="btn">%</button>
-                    </td>
-                    <td>
-                        <button class="btn" onclick="reset()">C</button>
-                    </td>
-                    <td>
-                        <button class="btn" onclick="removeNumber()">&lt;</button>
-                    </td>
-                    <td>
-                        <button class="btn">/</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button class="btn" onclick="addNumber(7)">7</button>
-                    </td>
-                    <td>
-                        <button class="btn" onclick="addNumber(8)">8</button>
-                    </td>
-                    <td>
-                        <button class="btn" onclick="addNumber(9)">9</button>
-                    </td>
-                    <td>
-                        <button class="btn">*</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button class="btn" onclick="addNumber(4)">4</button>
-                    </td>
-                    <td>
-                        <button class="btn" onclick="addNumber(5)">5</button>
-                    </td>
-                    <td>
-                        <button class="btn" onclick="addNumber(6)">6</button>
-                    </td>
-                    <td>
-                        <button class="btn">-</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button class="btn" onclick="addNumber(1)">1</button>
-                    </td>
-                    <td>
-                        <button class="btn" onclick="addNumber(2)">2</button>
-                    </td>
-                    <td>
-                        <button class="btn" onclick="addNumber(3)">3</button>
-                    </td>
-                    <td>
-                        <button class="btn">+</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button class="btn">+/-</button>
-                    </td>
-                    <td>
-                        <button class="btn" onclick="addNumber(0)">0</button>
-                    </td>
-                    <td>
-                        <button class="btn">.</button>
-                    </td>
-                    <td>
-                        <button class="btn">=</button>
-                    </td>
-                </tr>
-            </table>
+            <div id="buttons">
+                <div class="row">
+                    <button class="btn">%</button>
+                    <button class="btn" onclick="reset()">C</button>
+                    <button class="btn" onclick="removeNumber()">&lt;</button>
+                    <button class="btn">/</button>
+                </div>
+                <div class="row">
+                    <button class="btn" onclick="addNumber(7)">7</button>
+                    <button class="btn" onclick="addNumber(8)">8</button>
+                    <button class="btn" onclick="addNumber(9)">9</button>
+                    <button class="btn">*</button>
+                </div>
+                <div class="row">
+                    <button class="btn" onclick="addNumber(4)">4</button>
+                    <button class="btn" onclick="addNumber(5)">5</button>
+                    <button class="btn" onclick="addNumber(6)">6</button>
+                    <button class="btn">-</button>
+                </div>
+                <div class="row">
+                    <button class="btn" onclick="addNumber(1)">1</button>
+                    <button class="btn" onclick="addNumber(2)">2</button>
+                    <button class="btn" onclick="addNumber(3)">3</button>
+                    <button class="btn">+</button>
+                </div>
+                <div class="row">
+                    <button class="btn">+/-</button>
+                    <button class="btn" onclick="addNumber(0)">0</button>
+                    <button class="btn">.</button>
+                    <button class="btn">=</button>
+                </div>
+            </div>
         </div>
     </body>
 </html>
